@@ -77,9 +77,9 @@
         android:layout_height="wrap_content"
         android:hint="Username"
         android:inputType="textPersonName"
+        android:maxLength="32"
         android:minHeight="48dp"
         android:text=""
-        android:maxLength="32"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/backButton" />

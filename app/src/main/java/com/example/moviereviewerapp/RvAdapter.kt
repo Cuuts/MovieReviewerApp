@@ -9,15 +9,21 @@ class RvAdapter(
     private var reviewList: MutableList<Review>
 ) : RecyclerView.Adapter<RvAdapter.ViewHolder>() {
 
-    class ViewHolder (val binding: SingleReviewBinding) : RecyclerView.ViewHolder(binding.root) {}
+    class ViewHolder(val binding: SingleReviewBinding) : RecyclerView.ViewHolder(binding.root) {}
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        return ViewHolder(SingleReviewBinding.inflate(LayoutInflater.from(parent.context), parent, false))
+        return ViewHolder(
+            SingleReviewBinding.inflate(
+                LayoutInflater.from(parent.context),
+                parent,
+                false
+            )
+        )
     }
 
-    fun addReview (review: Review){
+    fun addReview(review: Review) {
         reviewList.add(review)
-        notifyItemInserted(reviewList.size-1)
+        notifyItemInserted(reviewList.size - 1)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {

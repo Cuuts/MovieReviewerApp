@@ -12,4 +12,4 @@ class Movie(
     val genre: Genre,
     val releaseDate: Date,
     val reviewList: ArrayList<Review> = arrayListOf()
-    ) : Parcelable
+) : Parcelable

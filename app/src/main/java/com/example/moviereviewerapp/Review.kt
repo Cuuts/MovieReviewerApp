@@ -6,9 +6,9 @@ import kotlinx.parcelize.*
 import java.util.*
 
 @Parcelize
-class Review (
+class Review(
     val uuid: UUID,
     val message: String,
     val user: String,
     val rating: Float
-    ) : Parcelable
+) : Parcelable
