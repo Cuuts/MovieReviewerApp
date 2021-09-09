@@ -1,5 +1,6 @@
 package com.example.moviereviewerapp
 
+import android.media.Image
 import android.os.Parcelable
 import java.util.*
 import kotlinx.parcelize.*
