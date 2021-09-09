@@ -118,7 +118,13 @@ Torsdag d. 9/9
     - Formater og tilføj worklog
     - Udvid inhold i worklog
 
-    [18.00 - 20.00]
+    [18.00 - 22.00]
     - Oprydning af projekt
     - Skrive kodekommentare
     - Research om parceable image type
+    - Forsøg på at tilføje billide dynamisk fra Class Movie instanser
+
+        Jeg har problemer med at ingen af de relevant data typer er parcelizeable
+        Ingen forsøg med Bitmap, Picture, Image, File har givet pote
+
+        Lige nu tilføjes et billede statisk fra R.drawable

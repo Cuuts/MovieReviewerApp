@@ -1,14 +1,22 @@
 package com.example.moviereviewerapp
 
 import android.content.Intent
+import android.graphics.Bitmap
+import android.graphics.ImageDecoder
+import android.media.Image
+import android.media.ImageReader
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Html
 import android.view.Gravity
 import android.view.ViewGroup
 import android.widget.RatingBar
 import android.widget.Toast
+import androidx.core.content.res.ResourcesCompat
+import androidx.core.widget.ImageViewCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.moviereviewerapp.databinding.ActivityReviewBinding
+import java.io.File
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -56,6 +64,7 @@ class ReviewActivity : AppCompatActivity() {
          */
         val arrayList = testData
         for ((count, i) in arrayList.withIndex()) {
+            binding.imageView.setImageResource(R.drawable.monke)
             i.reviewList.clear()
             item2?.get(count)?.reviewList?.let { i.reviewList.addAll(it) }
         }

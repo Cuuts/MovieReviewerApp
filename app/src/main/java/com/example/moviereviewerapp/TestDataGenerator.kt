@@ -1,5 +1,6 @@
 package com.example.moviereviewerapp
 
+import android.content.Context
 import android.media.Image
 import android.media.ImageReader
 import java.io.File
@@ -12,7 +13,7 @@ class TestDataGenerator {
 private fun generateData(): ArrayList<Movie> {
     var list: ArrayList<Movie> = arrayListOf()
     list.apply {
-        add(Movie(UUID.randomUUID(), "The Shawshank Redemption", Genre.DRAMA, Date(1994,10,14), ))
+        add(Movie(UUID.randomUUID(), "The Shawshank Redemption", Genre.DRAMA, Date(1994,10,14)))
         add(Movie(UUID.randomUUID(),"The Godfather", Genre.CRIME, Date(1972,3,19)))
         add(Movie(UUID.randomUUID(),"The Godfather: Part II", Genre.CRIME, Date(1974,12,18)))
         add(Movie(UUID.randomUUID(),"The Dark Knight", Genre.ACTION, Date(2008,7,18)))
