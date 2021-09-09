@@ -1,0 +1,124 @@
+Her er en lille tidsformateret tabel over dage og tidsintervaller hvor jeg har arbejdet samt hvad jeg har arbejdet på:
+
+Jeg har måtte følge mit "Få virksomhedspraktik" forløb fra 09.00 - 14.00, mandag til torsdag,
+så de dage har jeg først haft mulighed for at arbejde aktivt derefter.
+
+Lørdag d. 4/9
+    [18.00 - 20.00]
+    - Overfladisk research vedrørende Kotlin og Android studio
+    - Første kodeforsøg i Koitlin på play.kotlin.org for at afprøve basic Kotlin syntaks
+
+    [20.00 - 22.00]
+    - Installation af Android studio og opsættelse af mobilVM
+    - Overfladisk udforskning af template kode og frontend xml
+    - Lidt arbejde på at gennemføre en developer.android.com "build your fisrt app"-style guide
+
+Mandag d. 6/9
+    [14.00 - 16.00]
+    - Mere arbejde med guiden som hjælp/inspiration til mit MovieReview formål
+    - Arbejde på at opsætte: Class Movie, Class Review, Enum Genre
+    - Forsøg på at vise liste med filmtitler
+    - Jeg ender med at sidde fast, da jeg har for lidt viden om de ting templaten har givet mig
+    - Start af nyt Android studio project med emptyActivity template
+    - Opsætning af forsimplet Class Movie med kun UUID, titel, genre, dato
+    - Research om binding da jeg havde opdaget at "binding.." blev brugt i det gamle projekt
+    - Implementation af ActivityMainBinding
+    - Research, hvordan kan jeg dynamisk tilføje radio buttons til min radio group
+    - Implementation af dynamisk instatiering og tilføjelse af radio button baseret på test Movie instanser
+    - Implementation af Class TestDataGenerator der genererer en ArrayList<Movie> med indhold baseret på testdata i mailen med opgaven
+    - Forsøg på at skifte til ny skærm med fragment
+
+        På nuværende tidspunkt genererer MainActivity en vertikalt ordnet liste af radio buttons med filmtitler fra testdataen i en radio group,
+        og en "VIEW REVIEWS" knap.
+
+        Listen med filmtitler lader kun én radio button være checked af gangen,
+        knappen har ingen funktionalitet
+
+    [17.30 - 22.00]
+    - Flere forsøg på at skifte til ny skærm med fragment
+    - Research om Fragments og Activities
+    - Implementation af ny Activity: Class ReviewActivity, activity_review.xml
+    - Research om Intent
+    - Research om Parcelize
+    - Implementation af funktion "switchActivity" der forbereder en Intent fra MainActivity til ReviewActivity og kalder startActivity() med den Intent
+    - Research om setOnClickListener
+    - Implementation af switchActivity() ved buttonpress af "VIEW REVIEWS" button
+    - Research om Intent.putExtra() og intent.getParceableExtra<>()
+    - Implementation af logik der overfører titlen af den valgte film, ved klik af "VIEW REVIEWS" button, til ReviewActivity
+    - Implementatoin af logik der sætter den overførte filmtitel som teksten synlig i et banner øverst i ReviewActivity's layout
+    - Implementation af "BACK" button i ReviewActivity med logik der fører content viewet tilbage til MainActivity
+
+        "VIEW REVIEWS" knappen fører ved klik nu til ReviewActivity med sit eget content view
+        ReviewActivity viser øverst et banner med titlen på den valgte film.
+        "BACK" knappen fører tilbage til MainActivity
+
+
+Tirsdag d. 7/9
+    [14.00 - 16.00]
+    - Arbejde på layoutet af ReviewActivity
+    - Forsøg på at tiløje et RecyclerView til layoutet i ReviewActivity
+    - Jeg har brugt et godt stykke tid på at prøve at finde ud af hvorfor jeg får errors når jeg tilføjer eller ændre elementer i xml filer
+    - Jeg får også errors når jeg tilføjer eller ændre kode
+    - Ingen errors efter at have lukke og åbnet Android studio og VM???
+    - Oprydning af diverse troubleshooting
+    - Implementeret nyt layout i ReviewActivity
+    - Overfladisk research af Adapter til interaktion med recycler viewet
+    - Implementation af single_review.xml
+
+        Direkte under er to knapper "BACK" til venstre og "SUBMIT" til højre samt teskten "User reviews" midt for.
+        Under disse er en multi line EditText med hint teksten: "Write a review here"
+
+        "SUBMIT" knappen har ingen funktionalitet
+        Der kan skrives et multi line input i EditText feltet
+
+    [18.00 - 23.00]
+    - Research om Recycler view
+    - Research om Adapter
+    - Implementation af Class RvAdapter
+    - Implementation af logik der kan tilføje statisk genererede instanser af Review til recycler viewet med RvAdapter
+    - Implementation af logik der tilføjer et review i listen svarende til teksten i multi line EditTexten
+    - Implementation af Username felt og rating bar i activity_review.xml som også bliver læst som input til et review
+
+        Intet ændret i MainActivity.
+
+        I ReviewActivity viser recycler viewet nu et par statiske dummy reviews i alle film man vælger.
+        Man kan tilføje sit eget review at trykke på "SUBMIT" knappen.
+        Reviewet skal indholde tekst, eller vises en Toast der beder brugeren om at skrive et review
+        Hvis brugeren ikke indtaster et brugernavn får reviewet brugernavnet "Anonymous".
+        Rating baren går far nul til fem i trin af størrelsen 0.5
+
+        Så snart brugeren forlader ReviewActivity forsvinder brugerens reviews, og vil ikke kunne ses igen
+
+
+Onsdag d. 8/9
+    [15.00 - 17.00]
+    - Research om hvordan man sender lister af objekter med Intent
+    - Research om Intent
+    - Research om Room
+    - Forsøg på at gemme data der kan sendes og opdateres mellem activities
+
+        Intet er ændret
+
+        Jeg havde ide om at det var muligt at sende fx en liste med data frem og tilbage mellem activities.
+        Jeg er løbet i problemer med at jeg ikke bare kan bruge .putExtra("EXTRA_GOING_TO_REVIEWACTIVITY", intent.getParcelableArrayList("EXTRA_FROM_REVIEW"))
+
+    [20.00 - 23.30]
+    - Flere forsøg på at sende en liste frem og tilbage mellem activities
+    - Implementation af at sende en ArrayList<Movie> frem og tilbage mellem activities
+    - Implementation af Toast prompt hvis ingen film er markeret i MainActivity
+
+        Så længe appen kører kan den huske alle reviews der er blevet skrevet på individuelle film.
+
+        Det lykkedes at sende en liste frem og tilbage ved hjælp at en intermediary ArrayList<Movie> i både Main- og ReviewActivity
+
+
+Torsdag d. 9/9
+    [14.00 - 16.00]
+    - Upload til git
+    - Formater og tilføj worklog
+    - Udvid inhold i worklog
+
+    [18.00 - 20.00]
+    - Oprydning af projekt
+    - Skrive kodekommentare
+    - Research om parceable image type
