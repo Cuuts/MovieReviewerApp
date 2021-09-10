@@ -128,3 +128,23 @@ Torsdag d. 9/9
         Ingen forsøg med Bitmap, Picture, Image, File har givet pote
 
         Lige nu tilføjes et billede statisk fra R.drawable
+
+
+Fredag d. 10/9
+    [10.00 - 12.00]
+    - Research om data typer til billider
+    - Jeg har konkluderet at jeg ikke når at finde ud af hvordan jeg skal inkludere en parceable billide type i Movie klassen
+    - Implementation af statisk billidevisning i ReviewActivity
+    - Implementation af dynamisk genererede average ratings som vises i MainActivity
+
+        Jeg har ikke kunne finde på eller researche mig til en løsning der lader mig gemme billid filer i klasser.
+        Jeg har derfor besluttet mig for at bruge min sidste tid på at kode en anden lille ting
+
+        MainActivity viser nu en gennemsnittlig rating baseret på deres reviews under alle film titler.
+        Ratingen er ikke manipulerbar for brugeren.
+        Radio gruppen i MainAcivity er nu en del af et scrollView for at gøre op for den extra plads det tager at vise en rating på alle film.
+        "VIEW REVIEWS" knappen er flyttet uden for scrollViewet så knappen altid er synlig for brugeren
+
+    [13.00 - 13.30]
+    - Opdatere worklog og kodekommentare
+    - Opdatering og afprøvning af git repository
